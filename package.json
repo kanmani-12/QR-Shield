@@ -1,0 +1,29 @@
+{
+  "name": "qrshield",
+  "version": "1.0.0",
+  "description": "Intelligent Pre-Click QR & URL Security Platform",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build",
+    "test": "npm run test:server && npm run test:client",
+    "test:server": "cd server && npm test",
+    "test:client": "cd client && npm test",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "lint": "cd server && npm run lint && cd ../client && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@yudiel/react-qr-scanner": "^2.6.0",
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "ipaddr.js": "^2.5.0",
+    "lucide-react": "^1.61.0"
+  }
+}
